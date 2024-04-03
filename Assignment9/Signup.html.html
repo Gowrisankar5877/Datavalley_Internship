@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+<h1 align="center">Sign up</h1>
+
+<form action="/submit_form" method="post" enctype="multipart/form-data" align="center">
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Full Name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Gmail ID"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="8 characters"><br><br>
+
+    <label for="confirmPassword">Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="8 characters"><br><br>
+
+    <label for="dob">Date Of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label>Gender:</label><br> 
+    <label><input type="radio" name="gender" value="male"> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label>
+    <label><input type="radio" name="gender" value="other"> Other</label><br><br>
+
+    <label for="photo">Insert Your Photo:</label><br>
+    <input type="file" id="photo" name="photo"><br><br>
+
+    <label for="resume">Insert Your Resume:</label><br>
+    <input type="file" id="resume" name="resume"><br><br>
+
+    <label for="securityQuestion">Security Question:</label><br>
+    <select id="securityQuestion" name="securityQuestion">
+        <option value="q1">What is your mother's maiden name?</option>
+        <option value="q2">What is the name of your first pet?</option>
+        
+    </select><br><br>
+    <div id="answerInput" style="display: none;">
+    <label for="securityAnswer">Answer:</label><br>
+    <input type="text" id="securityAnswer" name="securityAnswer" placeholder="Your answer"><br><br>
+</div>
+
+<script>
+    document.getElementById('securityQuestion').addEventListener('change', function() {
+        var answerInput = document.getElementById('answerInput');
+        if (this.value !== '') {
+            answerInput.style.display = 'block';
+        } else {
+            answerInput.style.display = 'none';
+        }
+    });
+</script>
+
+    <label><input type="checkbox" id="termsCheckbox" required> I agree to the terms and conditions</label><br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>
