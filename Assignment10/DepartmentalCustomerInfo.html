@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departmental Store Customer Information Form</title>
+</head>
+<body>
+
+<h1 align="center">Customer Information Form</h1>
+
+<form action="#" method="post" align="center">
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="phone">Contact Phone No:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required><br><br>
+
+    <label for="days">Preferred Days of Purchasing:</label><br>
+    <input type="text" id="days" name="days" placeholder="E.g., Monday, Wednesday, Saturday"><br><br>
+
+    <label for="favoriteItem">Favorite Item:</label><br>
+    <select id="favoriteItem" name="favoriteItem">
+        <option value="groceries">Groceries</option>
+        <option value="clothing">Clothing</option>
+        <option value="electronics">Electronics</option>
+        <option value="household">Household Items</option>
+        
+    </select><br><br>
+
+    <label for="suggestions">Suggestions:</label><br>
+    <textarea id="suggestions" name="suggestions" rows="4" cols="50" placeholder="Enter your suggestions here"></textarea><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
